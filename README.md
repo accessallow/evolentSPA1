@@ -1,6 +1,9 @@
 # ContactManager
 
-Project created for Evolent Recruitment Assignment. This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Project created for Evolent Recruitment Assignment. 
+Live Demo : <a href="http://evcontact.22web.org/">http://evcontact.22web.org/</a>
+<br/>
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
 
 ## Development server
 
