@@ -1,0 +1,55 @@
+<div class="row">
+
+  <div class="col-md-8 order-md-1">
+    <h4 class="mb-3">Contact Details</h4>
+    <form class="needs-validation" novalidate>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="firstName">First name</label>
+          <input type="text" class="form-control" 
+          [(ngModel)]="contact.firstName" name="firstName"
+          id="firstName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid first name is required.
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="lastName">Last name</label>
+          <input type="text" class="form-control" 
+          [(ngModel)]="contact.lastName"  name="lastName"
+          id="lastName" placeholder="" value="" required>
+          <div class="invalid-feedback">
+            Valid last name is required.
+          </div>
+        </div>
+      </div>
+
+
+      <div class="mb-3">
+        <label for="email">Email</label>
+        <input type="email" 
+        [(ngModel)]="contact.email"  name="email"
+        class="form-control" id="email" placeholder="">
+        <div class="invalid-feedback">
+          Please enter a valid email address.
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="address">Contact Number</label>
+        <input type="text" 
+        [(ngModel)]="contact.contactNumber"  name="contactNumber"
+        class="form-control" id="address" placeholder="" required>
+        <div class="invalid-feedback">
+          Please enter your contact number
+        </div>
+      </div>
+
+      <br/>
+   
+      <button class="btn btn-primary" type="submit" (click)="saveDetails();">Save Details</button>
+      &nbsp;
+      <a class="btn btn-danger" routerLink="/">Cancel</a>
+    </form>
+  </div>
+</div>

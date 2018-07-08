@@ -1,0 +1,48 @@
+<div class="table-responsive">
+  <table class="table table-hover table-bordered table-sm">
+    <thead>
+      <tr style="background:#337efe;color:white;">
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Contact</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contact of contacts; let i = index" [attr.data-index]="i">
+        <td>{{i+1}}</td>
+        <td>{{contact.firstName}}</td>
+        <td>{{contact.lastName}}</td>
+        <td>{{contact.email}}</td>
+        <td>{{contact.contactNumber}}</td>
+        <td>
+
+          <a *ngIf="!showingInactiveBoard" routerLink="edit_contact/{{contact.id}}" class="btn btn-primary btn-sm" style="font-size: 0.8em;">
+            Edit
+          </a>
+          &nbsp;
+          <a *ngIf="!showingInactiveBoard" routerLink="delete_contact/{{contact.id}}" class="btn btn-danger btn-sm" style="font-size: 0.8em;">
+            Delete
+          </a>
+          &nbsp;
+          <a *ngIf="!showingInactiveBoard" 
+          href="#"
+          (click)="deactivateContact(contact.id);"
+          class="btn btn-warning btn-sm" style="font-size: 0.8em;">
+            Deactivate
+          </a>
+
+          <a *ngIf="showingInactiveBoard" 
+          
+          (click)="activateContact(contact.id);" class="btn btn-success btn-sm" style="color:white;font-size: 0.8em;">
+            Activate
+          </a>
+
+        </td>
+      </tr>
+     
+    </tbody>
+  </table>
+</div>
